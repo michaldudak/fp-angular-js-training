@@ -1,0 +1,9 @@
+﻿<h2>Shopping cart</h2>
+
+<ul>
+	<li ng-repeat="item in cartContents">
+		{{ item.product.title }}: {{ item.quantity }}
+	</li>
+</ul>
+
+<a href="#/order">Place order</a>

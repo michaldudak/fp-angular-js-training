@@ -1,0 +1,13 @@
+{
+	"name": "AngularJS-Training",
+	"version": "0.0.0",
+	"description": "Angular JS Training",
+	"main": "app.js",
+	"author": {
+		"name": "Micha³ Dudak",
+		"email": "mdudak@future-processing.com"
+	},
+	"dependencies": {
+		"express": "~3.4.4"
+	}
+}

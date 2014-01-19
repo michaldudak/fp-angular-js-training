@@ -1,0 +1,16 @@
+﻿<ul class="productList">
+	<li ng-repeat="product in products">
+		<span class="title">{{ product.title }}</span>
+		<span class="description">{{ product.description }}</span>
+		<span class="price">{{ product.price | currency }}</span>
+		<span class="quantity">in stock: {{ product.quantity }} <div quantity-indicator value="{{product.quantity}}" max-value="100"></div></span>
+		<button class="showDetails" ng-hide="visibleDetails[product.id]" ng-click="showDetails(product.id)">Show details</button>
+
+		<div data-expanding-panel class="productDetails" expanded="visibleDetails[product.id]" on-expand="onRowExpanded()">
+			<div ng-include="'/views/productDetails.html'"></div>
+
+			<button ng-click="addToCart(product)">Add to cart</button>
+			<button ng-click="hideDetails(product.id)">Hide details</button>
+		</div>
+	</li>
+</ul>
