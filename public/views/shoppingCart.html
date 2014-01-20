@@ -1,9 +1,7 @@
-﻿<h2>Shopping cart</h2>
+﻿<div class="cart">
+	<h2>Shopping cart</h2>
 
-<ul>
-	<li ng-repeat="item in cartContents">
-		{{ item.product.title }}: {{ item.quantity }}
-	</li>
-</ul>
+	<div ng-include="'/views/_cart.html'"></div>
 
-<a href="#/order">Place order</a>
+	<a class="btn" href="#/order">Confirm and place order</a>
+</div>

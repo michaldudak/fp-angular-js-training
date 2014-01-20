@@ -1,12 +1,18 @@
 ﻿<h2>Order</h2>
 
-<h3>Your cart</h3>
-<div ng-include="'/views/shoppingCart.html'" ng-controller="shoppingCartController"></div>
+<h3>Review your cart</h3>
+<div class="cart" ng-include="'/views/_cart.html'" ng-controller="shoppingCartController"></div>
 
-<h3>Your details</h3>
+<h3>Fill in your details</h3>
 <form ng-submit="placeOrder()" name="orderForm" novalidate>
 	<input type="text" name="name" ng-model="customer.name" placeholder="Name" required />
 	<input type="email" name="email" ng-model="customer.email" placeholder="Email" required />
 	<textarea name="address" ng-model="customer.address" placeholder="Address" required></textarea>
+	
+	<div class="notification {{message.type}}" ng-if="message">
+		{{message.text}}
+	</div>
+
 	<button type="submit">Confirm order</button>
 </form>
+

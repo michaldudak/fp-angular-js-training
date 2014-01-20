@@ -1,0 +1,27 @@
+﻿<table>
+	<thead>
+		<tr>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Unit price</th>
+			<th>Total price</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>{{ cartTotalPrice() | currency }}</td>
+		</tr>
+	</tfoot>
+
+	<tbody>
+		<tr ng-repeat="item in cartContents">
+			<td>{{ item.product.title }}</td>
+			<td>{{ item.quantity }}</td>
+			<td>{{ item.product.price | currency }}</td>
+			<td>{{ (item.product.price * item.quantity) | currency }}</td>
+		</tr>
+	</tbody>
+</table>

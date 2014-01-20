@@ -19,7 +19,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -31,6 +31,7 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="public\scripts\displayElement.js" />
+    <Compile Include="public\scripts\doubleClick.js" />
     <Compile Include="public\scripts\libs\angular-animate.js" />
     <Compile Include="public\scripts\libs\angular-animate.min.js" />
     <Compile Include="public\scripts\libs\angular-cookies.js" />
@@ -50,7 +51,6 @@
     <Compile Include="public\scripts\libs\angular.js" />
     <Compile Include="public\scripts\libs\angular.min.js" />
     <Compile Include="public\scripts\libs\jquery-2.0.3.js" />
-    <Compile Include="public\scripts\expandingPanelDirective.js" />
     <Compile Include="public\scripts\quantityIndicator.js" />
     <Compile Include="public\scripts\app.js" />
     <Compile Include="public\scripts\orderController.js" />
@@ -79,6 +79,7 @@
     <Content Include="public\views\productDetails.html" />
     <Content Include="public\views\products.html" />
     <Content Include="public\views\shoppingCart.html" />
+    <Content Include="public\views\_cart.html" />
     <Content Include="README.md" />
     <Content Include="public\index.html" />
   </ItemGroup>

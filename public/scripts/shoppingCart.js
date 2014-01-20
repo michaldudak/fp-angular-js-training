@@ -1,6 +1,6 @@
 ﻿app.service("shoppingCart", function() {
 	var cart = {};
-    
+
 	this.addProduct = function(product) {
 		if (!cart[product.id]) {
 			cart[product.id] = { product: product, quantity: 1 };

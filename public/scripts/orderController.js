@@ -3,9 +3,10 @@
 
 	$scope.placeOrder = function() {
 		if ($scope.orderForm.$invalid) {
-			alert("INVALID!");
+			$scope.message = { text: "Boo! Invalid input!", type: "error" };
 		} else {
-			alert("Placed an order for " + $scope.customer.name + " (" + $scope.customer.email + ")");
+			var text = "Placed an order for " + $scope.customer.name + " (" + $scope.customer.email + ")";
+			$scope.message = { text: text, type: "success" };
 		}
 	};
 });

@@ -5,13 +5,17 @@
 	<title>Angular Store</title>
 	<link rel="stylesheet" href="stylesheets/style.css" />
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body ng-app="app">
 	<div class="page">
 		<header>
-			<h1>Angular Store</h1>
-			<a href="#/"><i class="fa fa-home"></i> Home</a>
-			<a href="#/cart"><i class="fa fa-shopping-cart"></i> Shopping cart</a>
+			<h1><a href="#/">Angular Store</a></h1>
+			<div class="menu">
+				<a href="#/"><i class="fa fa-home"></i></a>
+				<a href="#/cart"><i class="fa fa-shopping-cart"></i></a>
+			</div>
 		</header>
 		<div class="content" ng-view></div>
 	</div>
@@ -27,9 +31,9 @@
 	<script src="scripts/shoppingCartController.js"></script>
 	<script src="scripts/orderController.js"></script>
 	<script src="scripts/quantityIndicator.js"></script>
-	<script src="scripts/expandingPanelDirective.js"></script>
 	<script src="scripts/tabs.js"></script>
 	<script src="scripts/tab.js"></script>
 	<script src="scripts/displayElement.js"></script>
+	<script src="scripts/doubleClick.js"></script>
 </body>
 </html>
