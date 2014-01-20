@@ -9,8 +9,8 @@
 			<div><button class="showDetails" ng-hide="visibleDetails[product.id]" ng-click="showDetails(product.id)">Show details</button></div>
 		</td>
 	</tr>
-	<tr ng-repeat-end ng-show="visibleDetails[product.id]">
-		<td colspan="2" class="productDetails">
+	<tr ng-repeat-end ng-show="visibleDetails[product.id]" class="productDetails">
+		<td colspan="2">
 			<div ng-include="'/views/productDetails.html'"></div>
 
 			<button ng-click="addToCart(product)">Add to cart</button>

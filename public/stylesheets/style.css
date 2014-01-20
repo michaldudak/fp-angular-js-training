@@ -38,11 +38,11 @@ h1 {
 	margin: 0;
 }
 
-h1::selection {
+h1 a::selection {
 	background: #015666;
 }
 
-h1::-moz-selection {
+h1 a::-moz-selection {
 	background: #015666;
 }
 
@@ -129,14 +129,29 @@ button::-moz-focus-inner {
 	border: none;
 }
 
-.productDetails {
+.productDetails > td {
 	padding: 10px;
+}
+
+.productDetails {
+	transition: all ease 2.5s;
+	opacity: 1;
+}
+
+.productDetails.ng-hide-add,
+.productDetails.ng-hide-remove {
+	display: table-row !important;
+}
+
+.productDetails.ng-hide {
+	opacity: 0;
 }
 
 .title {
 	font-size: 28px;
 	font-family: "Lobster";
 	text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+	cursor: default;
 }
 
 .quantityIndicator
