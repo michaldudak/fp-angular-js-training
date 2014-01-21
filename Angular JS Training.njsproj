@@ -30,6 +30,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="config\unit.conf.js" />
+    <Compile Include="gruntfile.js" />
     <Compile Include="public\scripts\displayElement.js" />
     <Compile Include="public\scripts\doubleClick.js" />
     <Compile Include="public\scripts\libs\angular-animate.js" />
@@ -61,6 +63,8 @@
     <Compile Include="public\scripts\tab.js" />
     <Compile Include="public\scripts\tabs.js" />
     <Compile Include="routes\products.js" />
+    <Compile Include="test\unit\quantityIndicatorTests.js" />
+    <Compile Include="test\unit\shoppingCartControllerTests.js" />
     <Content Include="package.json" />
     <Content Include="public\images\1.gif" />
     <Content Include="public\images\2.jpg" />
@@ -84,6 +88,8 @@
     <Content Include="public\index.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="config\" />
+    <Folder Include="test\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\scripts\" />
@@ -91,6 +97,7 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="public\views\" />
+    <Folder Include="test\unit\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
