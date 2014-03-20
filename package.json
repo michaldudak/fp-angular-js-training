@@ -1,6 +1,6 @@
 {
 	"name": "AngularJS-Training",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Angular JS Training",
 	"main": "app.js",
 	"author": {
@@ -11,12 +11,12 @@
 		"express": "~3.4.4"
 	},
 	"devDependencies": {
-		"grunt": "~0.4.2",
-		"phantomjs": "~1.9.2",
-		"karma-phantomjs-launcher": "~0.1.1",
+		"grunt": "~0.4.4",
+		"phantomjs": "~1.9.7",
+		"karma-phantomjs-launcher": "~0.1.2",
 		"karma-firefox-launcher": "~0.1.3",
 		"karma-chrome-launcher": "~0.1.2",
 		"karma-jasmine": "~0.1.5",
-		"grunt-karma": "~0.6.2"
+		"grunt-karma": "~0.8.2"
 	}
 }

@@ -138,15 +138,6 @@ button::-moz-focus-inner {
 	opacity: 1;
 }
 
-.productDetails.ng-hide-add,
-.productDetails.ng-hide-remove {
-	display: table-row !important;
-}
-
-.productDetails.ng-hide {
-	opacity: 0;
-}
-
 .title {
 	font-size: 28px;
 	font-family: "Lobster";

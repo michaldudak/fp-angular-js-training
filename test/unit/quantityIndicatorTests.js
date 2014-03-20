@@ -10,7 +10,7 @@
 		$compile = _$compile_;
 	}));
  
-	it('should calculate cart price', function() {
+	it('should set its width to a proper value', function() {
 
 		var markup = "<div quantity-indicator value='42' max-value='100'></div>";
 		var element = $(markup);

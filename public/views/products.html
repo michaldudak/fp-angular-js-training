@@ -1,5 +1,6 @@
-﻿<table class="products">
-	<tr ng-repeat-start="product in products" double-click="showDetails(product.id)">
+﻿<input type="search" placeholder="search products..." ng-model="searchTerm" />
+<table class="products">
+	<tr ng-repeat-start="product in products | filter:{ title: searchTerm }" double-click="showDetails(product.id)">
 		<td>
 			<span class="title">{{ product.title }}</span>
 		</td>

@@ -36,5 +36,4 @@
 
 		expect(actual).toBe(42);
 	});
-	
 })

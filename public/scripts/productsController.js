@@ -1,4 +1,4 @@
-﻿app.controller("productsController", function($scope, productService, shoppingCart) {
+﻿app.controller("productsController", function($scope, $location, productService, shoppingCart) {
 
 	productService.getProducts().then(function(response) {
 		$scope.products = response.data;
@@ -15,6 +15,7 @@
 
 		$scope.addToCart = function(product) {
 			shoppingCart.addProduct(product);
+			$location.path("cart");
 		};
 
 		$scope.onRowExpanded = function() {
