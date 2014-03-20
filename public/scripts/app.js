@@ -1,6 +1,6 @@
 ﻿(function(window, angular) {
 
-	var app = angular.module("app", ["ngRoute"]);
+	var app = angular.module("app", ["ngRoute", "gallery"]);
 
 	app.config(function($routeProvider) {
 		$routeProvider

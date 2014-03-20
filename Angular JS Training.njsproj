@@ -34,6 +34,10 @@
     <Compile Include="gruntfile.js" />
     <Compile Include="public\scripts\displayElement.js" />
     <Compile Include="public\scripts\doubleClick.js" />
+    <Compile Include="public\scripts\gallery\gallery.js" />
+    <Compile Include="public\scripts\gallery\image.js" />
+    <Compile Include="public\scripts\gallery\imageLink.js" />
+    <Compile Include="public\scripts\gallery\module.js" />
     <Compile Include="public\scripts\libs\angular-mocks.js" />
     <Compile Include="public\scripts\libs\angular-resource.js" />
     <Compile Include="public\scripts\libs\angular-resource.min.js" />
@@ -73,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config\" />
+    <Folder Include="public\scripts\gallery\" />
     <Folder Include="test\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />

@@ -1,8 +1,10 @@
-﻿<tabs>
+<tabs>
 	<tab title="Details">
 		{{ product.description }}
 	</tab>
 	<tab title="Photos">
-		<img ng-src="/images/{{product.image}}" />
+		<gallery>
+			<img ng-repeat="image in product.images" ng-src="/images/{{image}}" image />
+		</gallery>
 	</tab>
 </tabs>

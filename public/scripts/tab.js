@@ -1,14 +1,17 @@
 ﻿app.directive("tab", function() {
 	return {
+        scope: true,
 		restrict: "EA",
 		transclude: true,
 		require: "^tabs",
+        template: "<div ng-show='isTabVisible()' ng-transclude></div>",
+        replace: true,
 		link: function(scope, element, attrs, tabsController, transcludeLink) {
-			transcludeLink(function(clone) {
-				tabsController.addTab(attrs.title, clone);
-			});
-			
-			element.remove();
+			var tabIndex = tabsController.addTab(attrs.title);
+            
+            scope.isTabVisible = function() {
+                return scope.selectedTab === tabIndex;
+            };
 		}
 	};
 });

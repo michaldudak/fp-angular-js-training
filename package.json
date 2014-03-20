@@ -8,10 +8,11 @@
 		"email": "mdudak@future-processing.com"
 	},
 	"dependencies": {
-		"express": "~3.4.4"
+		"express": "~3.4.8"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.4",
+		"karma": "~0.12.1",
 		"phantomjs": "~1.9.7",
 		"karma-phantomjs-launcher": "~0.1.2",
 		"karma-firefox-launcher": "~0.1.3",
