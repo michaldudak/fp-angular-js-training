@@ -56,6 +56,7 @@
     <Compile Include="public\scripts\shoppingCartController.js" />
     <Compile Include="public\scripts\tab.js" />
     <Compile Include="public\scripts\tabs.js" />
+    <Compile Include="routes\orders.js" />
     <Compile Include="routes\products.js" />
     <Compile Include="test\unit\quantityIndicatorTests.js" />
     <Compile Include="test\unit\shoppingCartControllerTests.js" />

@@ -1,7 +1,5 @@
+"use strict";
 
-/*
- * GET product list.
- */
 exports.getAll = function(req, res) {
 
 	var products = [{

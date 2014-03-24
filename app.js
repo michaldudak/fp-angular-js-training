@@ -1,3 +1,4 @@
+"use strict";
 
 /**
   * Module dependencies.
@@ -7,6 +8,7 @@ var http = require('http');
 var path = require('path');
 
 var products = require('./routes/products');
+var orders = require('./routes/orders');
 
 var app = express();
 
@@ -19,7 +21,11 @@ app.use(express.urlencoded());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routing
 app.get('/products', products.getAll);
+app.get('/orders', orders.getAll);
+app.get('/orders/:id', orders.get);
+app.post('/orders', orders.create);
 
 // development only
 if ('development' == app.get('env')) {
