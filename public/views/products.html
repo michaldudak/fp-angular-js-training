@@ -8,6 +8,7 @@
 			<div class="price">{{ product.price | currency }}</div>
 			<div class="quantity">in stock: {{ product.quantity }} <div quantity-indicator value="{{product.quantity}}" max-value="100"></div></div>
 			<div><button class="showDetails" ng-hide="visibleDetails[product.id]" ng-click="showDetails(product.id)">Show details</button></div>
+			<div><button ng-click="addToCart(product)">Add to cart</button></div>
 		</td>
 	</tr>
 	<tr ng-repeat-end ng-show="visibleDetails[product.id]" class="productDetails">
@@ -19,4 +20,3 @@
 		</td>
 	</tr>
 </table>
-

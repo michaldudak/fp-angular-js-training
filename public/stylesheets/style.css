@@ -71,11 +71,35 @@ header .menu {
 
 .menu a {
 	color: #FFC300;
+	position: relative;
+}
+
+.menu .cartItemCount {
+	position: absolute;
+	font-size: 10pt;
+	color: #04859D;
+	display: block;
+	background: #FFC300;
+	min-width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	text-shadow: none;
+	top: -10px;
+	left: 10px;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 1px 1px 0 #8B003F;
 }
 
 table.products {
 	width: 100%;
 	border-collapse: collapse;
+}
+
+.products button {
+	min-width: 110px;
+	margin-bottom: 4px;
 }
 
 td {
