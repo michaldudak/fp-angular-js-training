@@ -28,5 +28,5 @@ exports.create = function(req, res) {
 	orders[id] = order;
 
 	res.location("/orders/" + id);
-	res.send(CREATED);
+	res.send(CREATED, order);
 };

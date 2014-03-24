@@ -251,6 +251,11 @@ textarea {
 	resize: none;
 }
 
+input.ng-valid, textarea.ng-valid {
+	padding: 6px;
+	border: 2px solid #539700;
+}
+
 input.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
 	padding: 6px;
 	border: 2px solid #8B003F;
