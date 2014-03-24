@@ -251,7 +251,7 @@ textarea {
 	resize: none;
 }
 
-input.ng-valid, textarea.ng-valid {
+form input.ng-valid, form textarea.ng-valid {
 	padding: 6px;
 	border: 2px solid #539700;
 }

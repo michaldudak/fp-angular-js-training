@@ -5,9 +5,9 @@
 
 <h3>Fill in your details</h3>
 <form ng-submit="placeOrder()" name="orderForm" novalidate>
-	<input type="text" name="name" ng-model="customer.name" placeholder="Name" required />
-	<input type="email" name="email" ng-model="customer.email" placeholder="Email" required />
-	<textarea name="address" ng-model="customer.address" placeholder="Address" required></textarea>
+	<input type="text" name="name" ng-model="order.customer.name" placeholder="Name" required />
+	<input type="email" name="email" ng-model="order.customer.email" placeholder="Email" required />
+	<textarea name="address" ng-model="order.customer.address" placeholder="Address" required></textarea>
 	
 	<div class="notification {{message.type}}" ng-if="message">
 		{{message.text}}
@@ -16,4 +16,3 @@
 	<button type="submit">Confirm order</button>
 	<a href="#/" class="btn">Back to shopping</a>
 </form>
-
