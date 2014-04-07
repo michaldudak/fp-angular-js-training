@@ -47,6 +47,7 @@
     <Compile Include="public\scripts\libs\angular.js" />
     <Compile Include="public\scripts\libs\angular.min.js" />
     <Compile Include="public\scripts\libs\jquery.js" />
+    <Compile Include="public\scripts\Order.js" />
     <Compile Include="public\scripts\quantityIndicator.js" />
     <Compile Include="public\scripts\app.js" />
     <Compile Include="public\scripts\orderController.js" />

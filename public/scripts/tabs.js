@@ -11,15 +11,15 @@
 		replace: true,
 		controller: function($scope) {
 			$scope.registeredTabs = [];
-            
+
 			$scope.switchTab = function(tab) {
 				$scope.selectedTab = tab;
 			};
 
 			this.addTab = function(title, content) {
-                var index = $scope.registeredTabs.length;
+				var index = $scope.registeredTabs.length;
 				$scope.registeredTabs.push({ title: title, index: index });
-                return index;
+				return index;
 			};
 		},
 		link: function(scope, element, attrs, controller, transcludeLink) {
