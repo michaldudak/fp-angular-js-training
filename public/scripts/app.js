@@ -1,4 +1,5 @@
-﻿(function(window, angular) {
+(function(angular) {
+	"use strict";
 
 	var app = angular.module("app", ["ngRoute", "ngResource", "gallery"]);
 
@@ -27,6 +28,4 @@
 			});
 	});
 
-	window.app = app;
-
-} (window, window.angular));
+} (window.angular));

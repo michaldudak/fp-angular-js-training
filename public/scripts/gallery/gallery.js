@@ -1,4 +1,4 @@
-(function (window, angular) {
+(function (angular) {
 	"use strict";
 	
 	angular.module("gallery").directive("gallery", function($compile) {
@@ -56,4 +56,5 @@
 			}
 		};
 	});
-} (window, window.angular));
+	
+} (window.angular));

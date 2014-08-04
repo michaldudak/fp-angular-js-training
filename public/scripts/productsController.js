@@ -1,25 +1,30 @@
-﻿app.controller("productsController", function($scope, $location, productService, shoppingCart) {
+(function(angular) {
+	"use strict";
 
-	productService.getProducts().then(function(response) {
-		$scope.products = response.data;
+	angular.module("app").controller("productsController", function($scope, $location, productService, shoppingCart) {
 
-		$scope.visibleDetails = {};
+		productService.getProducts().then(function(response) {
+			$scope.products = response.data;
 
-		$scope.showDetails = function(id) {
-			$scope.visibleDetails[id] = true;
-		};
-		
-		$scope.hideDetails = function(id) {
-			$scope.visibleDetails[id] = false;
-		};
+			$scope.visibleDetails = {};
 
-		$scope.addToCart = function(product) {
-			shoppingCart.addProduct(product);
-			$location.path("cart");
-		};
+			$scope.showDetails = function(id) {
+				$scope.visibleDetails[id] = true;
+			};
 
-		$scope.onRowExpanded = function() {
-			console.log("product details expanded.");
-		};
+			$scope.hideDetails = function(id) {
+				$scope.visibleDetails[id] = false;
+			};
+
+			$scope.addToCart = function(product) {
+				shoppingCart.addProduct(product);
+				$location.path("cart");
+			};
+
+			$scope.onRowExpanded = function() {
+				window.console.log("product details expanded.");
+			};
+		});
 	});
-});
+	
+}(window.angular));
