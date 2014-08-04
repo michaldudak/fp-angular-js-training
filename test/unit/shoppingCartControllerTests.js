@@ -1,4 +1,4 @@
-﻿describe("Shopping cart controller tests", function() {
+describe("Shopping cart controller tests", function() {
 
 	var $rootScope;
 	var $controller;
@@ -36,4 +36,4 @@
 
 		expect(actual).toBe(42);
 	});
-})
+});

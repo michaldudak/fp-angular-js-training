@@ -1,4 +1,5 @@
-﻿describe("QuantityIndicator directive tests", function() {
+describe("QuantityIndicator directive tests", function() {
+	"use strict";
 
 	var $rootScope;
 	var $compile;
@@ -22,4 +23,4 @@
 		expect(element.find(".ratio").length).toBe(1);
 		expect(element.find(".ratio").css("width")).toBe("42%");
 	});
-})
+});
