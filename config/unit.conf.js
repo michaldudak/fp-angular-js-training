@@ -1,12 +1,13 @@
-﻿module.exports = function (config) {
+module.exports = function (config) {
 	config.set({
 		basePath: "..",
-		singleRun: false,
-		autoWatch: true,
-
 		frameworks: ["jasmine"],
 		
-		browsers: ["Chrome", "PhantomJS", "Firefox"],
+		browsers: [
+			"Chrome",
+			"PhantomJS",
+			"Firefox"
+		],
 
 		files: [
 			"public/scripts/libs/jquery.js",
