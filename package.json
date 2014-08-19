@@ -27,6 +27,8 @@
 		"karma-chrome-launcher": "~0.1.4",
 		"karma-jasmine": "~0.2.0",
 		"grunt-karma": "~0.8.3",
-		"grunt-protractor-runner": "~1.1.0"
+		"grunt-protractor-runner": "~1.1.0",
+		"karma-junit-reporter": "~0.2.2",
+		"jasmine-reporters": "~1.0.0"
 	}
 }

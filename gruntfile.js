@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 				// config file for both tasks
 				configFile: "config/unit.conf.js"
 			},
-			unit: {
+			dev: {
 				options: {
 					// overriding global config
 					singleRun: true
@@ -16,21 +16,32 @@ module.exports = function (grunt) {
 					// overriding global config
 					autoWatch: true
 				}
+			},
+			ci: {
+				options: {
+					singleRun: true,
+					reporters: ["junit"],
+					junitReporter: {
+						outputFile: "test/results/test-results-unit.xml"
+					}
+				}
 			}
 		},
 		protractor: {
-			e2e: {
+			dev: {
 				options: {
-					configFile: "config/e2e.conf.js",
-					keepAlive: true, // If false, the grunt process stops when the test fails.
-					noColor: false, // If true, protractor will not use colors in its output.
-					args: { }
-				}
+					configFile: "config/e2e.conf.js"
+				},
+			},
+			ci: {
+				options: {
+					configFile: "config/e2e-ci.conf.js"
+				},
 			}
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-karma");
 	grunt.loadNpmTasks("grunt-protractor-runner");
-	grunt.registerTask("test", ["karma:unit", "protractor"]);
+	grunt.registerTask("test", ["karma:dev", "protractor:dev"]);
 };

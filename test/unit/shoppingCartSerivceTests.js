@@ -5,16 +5,17 @@ describe("Shopping Cart", function() {
 	
 	beforeEach(function() {
 		module("app");
+		
 		inject(function(_shoppingCart_) {
 			shoppingCart = _shoppingCart_;
 			
 			// Services are singletons, so we have to reset their state between tests.
 			shoppingCart.removeAll();
-		});		
+		});
 	});
 	
 	describe("getItemCount", function() {
-		describe("when no items were added to the cart", function() {			
+		describe("when no items were added to the cart", function() {
 			it("should return 0", function() {
 				expect(shoppingCart.getItemCount()).toBe(0);
 			});

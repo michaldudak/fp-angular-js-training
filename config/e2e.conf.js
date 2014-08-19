@@ -3,7 +3,7 @@ exports.config = {
 	baseUrl: "http://localhost:3000",
 	multiCapabilities: [{
 		browserName: 'firefox'
-	}, {
-		browserName: 'chrome'
-	}]
+	}],
+	keepAlive: true,
+	noColor: false
 };

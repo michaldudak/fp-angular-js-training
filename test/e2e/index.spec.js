@@ -1,5 +1,7 @@
 /* global describe, it, before, beforeEach, afterEach, expect, browser, by, element */
 
+var page = require("./page-objects/index.page.js");
+
 describe("Home page", function() {
 	"use strict";
 
@@ -7,16 +9,11 @@ describe("Home page", function() {
 
 	describe("when loaded", function() {
 		it("should display a correct title", function() {
-			expect(browser.getTitle()).toEqual("Angular Store");
+			expect(page.pageTitle()).toEqual("Angular Store");
 		});
 		
 		it("should display three items", function() {
-			var allElements = element.all(by.repeater("product in products"));
-			var filtered = allElements.filter(function(element) {
-				return element.isDisplayed();
-			});
-
-			filtered.then(function(obj) {
+			page.productsList().then(function(obj) {
 				expect(obj.length).toEqual(3);
 			});
 		});
@@ -24,14 +21,9 @@ describe("Home page", function() {
 	
 	describe("when searching for 'water'", function() {
 		it("should display one item", function() {
-			element(by.model("searchTerm")).sendKeys("water");
+			page.searchFor("water");
 
-			var allElements = element.all(by.repeater("product in products"));
-			var filtered = allElements.filter(function(element) {
-				return element.isDisplayed();
-			});
-
-			filtered.then(function(obj) {
+			page.productsList().then(function(obj) {
 				expect(obj.length).toEqual(1);
 			});
 		});
@@ -39,8 +31,8 @@ describe("Home page", function() {
 	
 	describe("when clicked on 'Add to cart'", function() {
 		beforeEach(function() {
-			browser.get("#/");
-			element(by.buttonText("Add to cart")).click();
+			page.get();
+			page.addFirstElementToCart();
 		});
 
 		afterEach(function() {
@@ -49,7 +41,7 @@ describe("Home page", function() {
 		});
 
 		it("should change the view to #/cart", function() {
-			expect(browser.getCurrentUrl()).toContain("/#/cart");
+			expect(page.getUrl()).toContain("/#/cart");
 		});
 
 		it("should display '1' near the cart icon", function() {

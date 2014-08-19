@@ -2,3 +2,5 @@
 /*.suo
 *.cache
 /obj
+test/
+.ntvs_analysis.dat
