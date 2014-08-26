@@ -1,59 +1,59 @@
-	.gallery {
-	  position: relative;
-	  height: 400px;
-	  width: 400px;
-	  display: block;
-	  border: 3px solid #015666;
-	}
+.gallery {
+	position: relative;
+	height: 400px;
+	width: 400px;
+	display: block;
+	border: 3px solid #015666;
+}
 
-	.gallery img {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  display: block;
-	  width: 400px;
-	}
+.gallery img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 400px;
+}
 
-	.gallery ol {
-	  position: absolute;
-	  display: block;
-	  bottom: -14px;
-	  left: 0;
-	  right: 0;
-	  text-align: center;
-	  z-index: 100;
-	  margin: 0;
-	  padding: 0;
-	}
+.gallery ol {
+	position: absolute;
+	display: block;
+	bottom: -14px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+}
 
-	.gallery li {
-	  display: inline-block;
-	  width: 16px;
-	  height: 16px;
-	  border-radius: 8px;
-	  text-indent: -9999px;
-	  background: #FFC300;
-	  border: 3px solid #015666;
-	  -moz-box-sizing: border-box;
-	  -webkit-box-sizing: border-box;
-	  box-sizing: border-box;
-	  margin: 0 8px;
-	  -moz-transition: all 300ms ease;
-	  -o-transition: all 300ms ease;
-	  -webkit-transition: all 300ms ease;
-	  transition: all 300ms ease;
-	  cursor: pointer;
-	  padding: 0;
-	}
+.gallery li {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	text-indent: -9999px;
+	background: #FFC300;
+	border: 3px solid #015666;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 8px;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	cursor: pointer;
+	padding: 0;
+}
 
-	.gallery li:hover {
-	  -moz-transform: scale(1.5);
-	  -ms-transform: scale(1.5);
-	  -o-transform: scale(1.5);
-	  -webkit-transform: scale(1.5);
-	  transform: scale(1.5);
-	  -moz-transition: all 100ms ease;
-	  -o-transition: all 100ms ease;
-	  -webkit-transition: all 100ms ease;
-	  transition: all 100ms ease;
-	}
+.gallery li:hover {
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-moz-transition: all 100ms ease;
+	-o-transition: all 100ms ease;
+	-webkit-transition: all 100ms ease;
+	transition: all 100ms ease;
+}
