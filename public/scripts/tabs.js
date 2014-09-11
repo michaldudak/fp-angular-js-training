@@ -6,26 +6,31 @@
 			transclude: true,
 			template: "<div class='tabs'>" +
 				"<ul class='headers'>" +
-				"<li ng-repeat='tab in registeredTabs' ng-class='{selected: tab.index === selectedTab}' ng-click='switchTab(tab.index)'>{{tab.title}}</li>" +
+				"<li ng-repeat='tab in registeredTabs' ng-class='{selected: tab.index === selectedTab}' ng-click='switchTab(tab)'>{{tab.title}}</li>" +
 				"</ul>" +
 				"<div class='content' ng-transclude></div>" +
 				"</div>",
 			replace: true,
+			scope: {},
 			controller: function($scope) {
 				$scope.registeredTabs = [];
 
-				$scope.switchTab = function(tab) {
-					$scope.selectedTab = tab;
+				$scope.switchTab = function(tabToShow) {
+					for (var i = 0; i < $scope.registeredTabs.length; i++) {
+						$scope.registeredTabs[i].controller.hide();
+					}
+
+					tabToShow.controller.show();
+					$scope.selectedTab = tabToShow.index;
 				};
 
-				this.addTab = function(title, content) {
+				this.addTab = function(title, controller) {
 					var index = $scope.registeredTabs.length;
-					$scope.registeredTabs.push({ title: title, index: index });
-					return index;
+					$scope.registeredTabs.push({ title: title, index: index, controller: controller });
 				};
 			},
-			link: function(scope, element, attrs, controller, transcludeLink) {
-				scope.selectedTab = 0;
+			link: function(scope) {
+				scope.switchTab(scope.registeredTabs[0]);
 			}
 		};
 	});

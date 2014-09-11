@@ -6,15 +6,25 @@
 			scope: true,
 			restrict: "EA",
 			transclude: true,
-			require: "^tabs",
-			template: "<div ng-show='isTabVisible()' ng-transclude></div>",
+			require: ["^tabs", "tab"],
+			template: "<div ng-show='visible' ng-transclude></div>",
 			replace: true,
-			link: function(scope, element, attrs, tabsController) {
-				var tabIndex = tabsController.addTab(attrs.title);
+			controller: function($scope) {
+				$scope.visible = false;
 
-				scope.isTabVisible = function() {
-					return scope.selectedTab === tabIndex;
+				this.show = function() {
+					$scope.visible = true;
 				};
+
+				this.hide = function() {
+					$scope.visible = false;
+				}
+			},
+			link: function(scope, element, attrs, controllers) {
+				var tabsController = controllers[0];
+				var tabController = controllers[1];
+
+				tabsController.addTab(attrs.title, tabController);
 			}
 		};
 	});
