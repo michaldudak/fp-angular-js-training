@@ -6,15 +6,18 @@
 		</td>
 		<td class="info">
 			<div class="price">{{ product.price | currency }}</div>
-			<div class="quantity">in stock: {{ product.quantity }} <div quantity-indicator value="{{product.quantity}}" max-value="100"></div></div>
+			<div class="quantity">
+				in stock: {{ product.quantity }}
+				<quantity-indicator value="product.quantity" max-value="100"></quantity-indicator>
+			</div>
 			<div>
-				<button ng-hide="visibleDetails[product.id]" ng-click="showDetails(product.id)">Show details</button>
-				<button ng-show="visibleDetails[product.id]" ng-click="hideDetails(product.id)">Hide details</button>
+				<button ng-hide="isVisible(product.id)" ng-click="showDetails(product.id)">Show details</button>
+				<button ng-show="isVisible(product.id)" ng-click="hideDetails(product.id)">Hide details</button>
 				<button ng-click="addToCart(product)">Add to cart</button>
 			</div>
 		</td>
 	</tr>
-	<tr ng-repeat-end ng-show="visibleDetails[product.id]">
+	<tr ng-repeat-end ng-show="isVisible(product.id)">
 		<td colspan="2">
 			<div ng-include="'/views/productDetails.html'"></div>
 			<button ng-click="addToCart(product)">Add to cart</button>

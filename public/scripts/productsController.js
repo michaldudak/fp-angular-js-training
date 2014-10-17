@@ -5,26 +5,26 @@
 
 		productService.getProducts().then(function(response) {
 			$scope.products = response.data;
-
-			$scope.visibleDetails = {};
-
-			$scope.showDetails = function(id) {
-				$scope.visibleDetails[id] = true;
-			};
-
-			$scope.hideDetails = function(id) {
-				$scope.visibleDetails[id] = false;
-			};
-
-			$scope.addToCart = function(product) {
-				shoppingCart.addProduct(product);
-				$location.path("cart");
-			};
-
-			$scope.onRowExpanded = function() {
-				window.console.log("product details expanded.");
-			};
 		});
+
+		var visibleDetails = {};
+
+		$scope.showDetails = function(id) {
+			visibleDetails[id] = true;
+		};
+
+		$scope.hideDetails = function(id) {
+			visibleDetails[id] = false;
+		};
+
+		$scope.isVisible = function(id) {
+			return !!visibleDetails[id];
+		};
+
+		$scope.addToCart = function(product) {
+			shoppingCart.addProduct(product);
+			$location.path("cart");
+		};
 	});
-	
+
 }(window.angular));
