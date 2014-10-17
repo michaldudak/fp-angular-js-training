@@ -1,12 +1,12 @@
 <input type="search" placeholder="search products..." ng-model="searchTerm" />
 <table class="products">
 	<tr ng-repeat-start="product in products | filter:{ title: searchTerm }" double-click="showDetails(product.id)">
-		<td class="title">
+		<td>
 			{{ product.title }}
 		</td>
-		<td class="info">
-			<div class="price">{{ product.price | currency }}</div>
-			<div class="quantity">
+		<td>
+			<div>{{ product.price | currency }}</div>
+			<div>
 				in stock: {{ product.quantity }}
 				<quantity-indicator value="product.quantity" max-value="100"></quantity-indicator>
 			</div>

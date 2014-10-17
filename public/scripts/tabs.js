@@ -5,10 +5,10 @@
 			restrict: "EA",
 			transclude: true,
 			template: "<div class='tabs'>" +
-				"<ul class='headers'>" +
+				"<ul>" +
 				"<li ng-repeat='tab in registeredTabs' ng-class='{selected: tab.index === selectedTab}' ng-click='switchTab(tab)'>{{tab.title}}</li>" +
 				"</ul>" +
-				"<div class='content' ng-transclude></div>" +
+				"<div ng-transclude></div>" +
 				"</div>",
 			replace: true,
 			scope: {},

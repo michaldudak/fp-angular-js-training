@@ -1,3 +1,4 @@
+/* general styles */
 body {
 	padding: 50px 0;
 	margin: 0;
@@ -56,67 +57,9 @@ h3 {
 	font-size: 28px;
 }
 
-header {
-	overflow: auto;
-	margin-bottom: 58px;
-	padding: 0 5px 8px 0;
-	text-shadow: 2px 2px 0 #8B003F;
-}
-
-header .menu {
-	float: right;
-	font-size: 35px;
-	margin-top: 19px;
-}
-
-.menu a {
-	color: #FFC300;
-	position: relative;
-}
-
-.menu .cartItemCount {
-	position: absolute;
-	font-size: 10pt;
-	color: #04859D;
-	display: block;
-	background: #FFC300;
-	min-width: 20px;
-	height: 20px;
-	text-align: center;
-	line-height: 20px;
-	text-shadow: none;
-	top: -10px;
-	left: 10px;
-	font-weight: bold;
-	border-radius: 10px;
-	box-shadow: 1px 1px 0 #8B003F;
-}
-
-table.products {
-	width: 100%;
-	border-collapse: collapse;
-}
-
-.products button {
-	min-width: 110px;
-	margin-bottom: 4px;
-}
-
 td {
 	border-bottom: 1px solid #206876;
 }
-
-
-td.info {
-	width: 115px;
-	padding: 10px 0 10px 0;
-	text-align: center;
-}
-
-.price {
-	font-size: 130%;
-}
-
 
 button, a.btn {
 	background: #015666;
@@ -154,15 +97,75 @@ button::-moz-focus-inner {
 	border: none;
 }
 
-.title {
+/* header */
+header {
+	overflow: auto;
+	margin-bottom: 58px;
+	padding: 0 5px 8px 0;
+	text-shadow: 2px 2px 0 #8B003F;
+}
+
+header .menu {
+	float: right;
+	font-size: 35px;
+	margin-top: 19px;
+}
+
+.menu a {
+	color: #FFC300;
+	position: relative;
+}
+
+.menu .cartItemCount {
+	position: absolute;
+	font-size: 10pt;
+	color: #04859D;
+	display: block;
+	background: #FFC300;
+	min-width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	text-shadow: none;
+	top: -10px;
+	left: 10px;
+	font-weight: bold;
+	border-radius: 10px;
+	box-shadow: 1px 1px 0 #8B003F;
+}
+
+/* products table */
+.products {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* product title */
+.products td:first-child:not(:last-child) {
 	font-size: 28px;
 	font-family: "Lobster";
 	text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
 	cursor: default;
 }
 
-.quantityIndicator
-{
+/* product information */
+.products td:last-child:not(:first-child) {
+	width: 115px;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+/* price */
+.products td:last-child:not(:first-child) div:first-child {
+	font-size: 130%;
+}
+
+.products button {
+	min-width: 110px;
+	margin-bottom: 4px;
+}
+
+.quantityIndicator {
 	width: 100px;
 	height: 6px;
 	background: #015666;
@@ -171,8 +174,7 @@ button::-moz-focus-inner {
 	padding: 2px;
 }
 
-.ratio
-{
+.ratio {
 	height: 6px;
 	background: #FFC300;
 	border-radius: 3px;
@@ -182,23 +184,21 @@ button::-moz-focus-inner {
 	margin-bottom: 30px;
 }
 
-
-.tabs .headers {
+.tabs > ul {
 	list-style: none;
 	padding: 0;
 	margin: 10px 0 20px;
 	border-bottom:1px solid #37B6CE;
 }
 
-.tabs .headers li {
+.tabs > ul li {
 	display: inline-block;
 	padding: 5px 10px;
-	
 	border-radius: 5px 5px 0 0;
 	cursor: pointer;
 }
 
-.tabs > .headers .selected {
+.tabs > ul .selected {
 	background: #37B6CE;
 }
 
