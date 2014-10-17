@@ -19,7 +19,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="config\e2e-ci.conf.js" />
     <Compile Include="config\e2e.conf.js" />
     <Compile Include="config\unit.conf.js" />
     <Compile Include="gruntfile.js" />
@@ -41,12 +42,8 @@
     <Compile Include="public\scripts\gallery\module.js" />
     <Compile Include="public\scripts\libs\angular-mocks.js" />
     <Compile Include="public\scripts\libs\angular-resource.js" />
-    <Compile Include="public\scripts\libs\angular-resource.min.js" />
     <Compile Include="public\scripts\libs\angular-route.js" />
-    <Compile Include="public\scripts\libs\angular-route.min.js" />
-    <Compile Include="public\scripts\libs\angular-scenario.js" />
     <Compile Include="public\scripts\libs\angular.js" />
-    <Compile Include="public\scripts\libs\angular.min.js" />
     <Compile Include="public\scripts\libs\jquery.js" />
     <Compile Include="public\scripts\Order.js" />
     <Compile Include="public\scripts\quantityIndicator.js" />
@@ -62,6 +59,8 @@
     <Compile Include="routes\orders.js" />
     <Compile Include="routes\products.js" />
     <Compile Include="test\e2e\index.spec.js" />
+    <Compile Include="test\e2e\page-objects\cart.page.js" />
+    <Compile Include="test\e2e\page-objects\index.page.js" />
     <Compile Include="test\unit\quantityIndicatorDirectiveTests.js" />
     <Compile Include="test\unit\shoppingCartControllerTests.js" />
     <Compile Include="test\unit\shoppingCartSerivceTests.js" />
@@ -74,9 +73,6 @@
     <Content Include="public\images\water-1.jpg" />
     <Content Include="public\images\water-2.jpg" />
     <Content Include="public\images\water-3.jpg" />
-    <Content Include="public\scripts\libs\angular-resource.min.js.map" />
-    <Content Include="public\scripts\libs\angular-route.min.js.map" />
-    <Content Include="public\scripts\libs\angular.min.js.map" />
     <Content Include="public\stylesheets\gallery.css" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="public\views\order.html" />
@@ -100,6 +96,7 @@
     <Folder Include="routes\" />
     <Folder Include="public\views\" />
     <Folder Include="test\e2e\" />
+    <Folder Include="test\e2e\page-objects\" />
     <Folder Include="test\unit\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
