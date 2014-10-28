@@ -243,16 +243,6 @@ textarea {
 	resize: none;
 }
 
-form input.ng-valid, form textarea.ng-valid {
-	padding: 6px;
-	border: 2px solid #539700;
-}
-
-input.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
-	padding: 6px;
-	border: 2px solid #8B003F;
-}
-
 .notification {
 	margin: 8px 0;
 	color: #FFF;
@@ -304,4 +294,28 @@ input.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
 	.notification {
 		width: 100%;
 	}
+}
+
+
+/* validation */
+.validationError {
+	display: none;
+	color: #8B003F;
+}
+
+input.ng-valid,
+textarea.ng-valid {
+	padding: 6px;
+	border: 2px solid #539700;
+}
+
+.ng-submitted *:not(form).ng-invalid,
+*:not(form).ng-invalid.ng-touched {
+  padding: 6px;
+  border: 2px solid #8B003F;
+}
+
+.ng-submitted *:not(form).ng-invalid + .validationError,
+*:not(form).ng-invalid.ng-touched + .validationError {
+	display: inline;
 }

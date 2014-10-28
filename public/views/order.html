@@ -1,4 +1,4 @@
-﻿<h2>Order</h2>
+<h2>Order</h2>
 
 <h3>Review your cart</h3>
 <div class="cart" ng-include="'/views/_cart.html'" ng-controller="shoppingCartController"></div>
@@ -6,8 +6,15 @@
 <h3>Fill in your details</h3>
 <form ng-submit="placeOrder()" name="orderForm" novalidate>
 	<input type="text" name="name" ng-model="order.customer.name" placeholder="Name" required />
+	<span class="validationError" ng-messages="orderForm.name.$error" include="errorMessages"></span>
+	
 	<input type="email" name="email" ng-model="order.customer.email" placeholder="Email" required />
-	<textarea name="address" ng-model="order.customer.address" placeholder="Address" required></textarea>
+	<span class="validationError" ng-messages="orderForm.email.$error" include="errorMessages"></span>
+	
+	<textarea name="address" ng-model="order.customer.address" placeholder="Address"  multiline-required></textarea>
+	<span class="validationError" ng-messages="orderForm.address.$error" include="errorMessages">
+		<ng-message when="multilineRequired">Address too short</ng-message>
+	</span>
 	
 	<div class="notification {{message.type}}" ng-if="message">
 		{{message.text}}
@@ -15,4 +22,9 @@
 
 	<button type="submit">Confirm order</button>
 	<a href="#/" class="btn">Back to shopping</a>
+	
+	<script type="text/ng-template" id="errorMessages">
+		<ng-message when="required">Required field</ng-message>
+		<ng-message when="email">Wrong email format</ng-message>
+	</script>
 </form>
