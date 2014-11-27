@@ -18,3 +18,6 @@ You may also run the suites separately: `grunt karma:dev` starts up the unit tes
 The `dev` configuration uses the console reporter. If you wish to have a XML file with test results, run `grunt karma:ci` or `grunt protractor:ci`, respectively. Test results will be available under `test/results` directory (please note that the tests may fail if this directory does not exist). 
 
 What's more, unit tests may also be started in a watch mode. Executing `grunt karma:watch` starts up Karma and watches for file changes. If either source code or test is changed, all the tests are run immediately.
+
+##Additional resources
+For a summary of directive communication methods take a look at http://blog.dudak.pl/2014/angular-js-directive-communication-guide-part-1 and http://blog.dudak.pl/2014/angular-js-directive-communication-guide-part-2
