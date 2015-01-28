@@ -24,7 +24,7 @@
 	<a href="#/" class="btn">Back to shopping</a>
 	
 	<script type="text/ng-template" id="errorMessages">
-		<ng-message when="required">Required field</ng-message>
-		<ng-message when="email">Wrong email format</ng-message>
+		<span ng-message when="required">This field is required.</span>
+		<span ng-message when="email">This doesn't look like an email address.</span>
 	</script>
 </form>

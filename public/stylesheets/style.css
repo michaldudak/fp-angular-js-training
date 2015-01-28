@@ -6,7 +6,7 @@ body {
 	font-size: 14px;
 	background: #04859D;
 	color: white;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+	text-shadow: 1px 1px 0 #015666;
 }
 
 ::selection {
@@ -64,9 +64,9 @@ td {
 button, a.btn {
 	background: #015666;
 	border-radius: 6px;
-	box-shadow: 2px 2px 0 #FFC300;
+	box-shadow: 1px 2px 0 #FFC300;
 	border: none;
-	font-family:'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	color: white;
 	padding: 6px 10px;
@@ -87,6 +87,7 @@ a.btn:active {
 	transition: none;
 	outline: none;
 }
+
 button:focus,
 a.btn:focus {
 	outline: none;
@@ -97,12 +98,18 @@ button::-moz-focus-inner {
 	border: none;
 }
 
+button:hover,
+a.btn:hover {
+	color: #FFC300;
+}
+
+
 /* header */
 header {
 	overflow: auto;
 	margin-bottom: 58px;
 	padding: 0 5px 8px 0;
-	text-shadow: 2px 2px 0 #8B003F;
+	text-shadow: 2px 2px 0 #015666;
 }
 
 header .menu {
@@ -131,7 +138,7 @@ header .menu {
 	left: 10px;
 	font-weight: bold;
 	border-radius: 10px;
-	box-shadow: 1px 1px 0 #8B003F;
+	box-shadow: 1px 1px 0 #015666;
 }
 
 /* products table */
@@ -238,6 +245,23 @@ input, textarea {
 	transition: width 300ms ease;
 }
 
+form input,
+form textarea {
+	float: left;
+	clear: left;
+	display: inline-block;
+}
+
+form button {
+	clear: both;
+	float: left;
+}
+
+form a {
+	float: left;
+	margin-left: 20px;
+}
+
 textarea {
 	height: 57px;
 	resize: none;
@@ -252,6 +276,8 @@ textarea {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	transition: width 300ms ease;
+	float: left;
+	clear: both;
 }
 
 .notification.success {
@@ -300,19 +326,84 @@ textarea {
 /* validation */
 .validationError {
 	display: none;
-	color: #8B003F;
+	background: #8B003F;
+	padding: 0 8px;
+	height: 35px;
+	box-sizing: border-box;
+	line-height: 35px;
+	color: #FFF;
+	float: left;
+	margin: 8px 0 0 16px;
+	position: relative;
 }
 
-input.ng-valid,
-textarea.ng-valid {
+.validationError:before {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	border: 8px solid;
+	border-color: transparent #8B003F transparent transparent;
+	left: -14px;
+	top: 8px;
+}
+
+@-webkit-keyframes shake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	
+	50% {
+		transform: translateX(-4px);
+	}
+}
+
+@-moz-keyframes shake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	
+	50% {
+		transform: translateX(-4px);
+	}
+}
+
+@keyframes shake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	
+	50% {
+		transform: translateX(-4px);
+	}
+}
+
+.validationError.ng-active {
+	-moz-animation: shake 200ms 3;
+	-webkit-animation: shake 200ms 3;
+	animation: shake 200ms 3;
+}
+
+form {
+	display: block;
+}
+
+form:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+form input.ng-valid,
+form textarea.ng-valid {
 	padding: 6px;
 	border: 2px solid #539700;
 }
 
 .ng-submitted *:not(form).ng-invalid,
 *:not(form).ng-invalid.ng-touched {
-  padding: 6px;
-  border: 2px solid #8B003F;
+	padding: 6px;
+	border: 2px solid #8B003F;
 }
 
 .ng-submitted *:not(form).ng-invalid + .validationError,

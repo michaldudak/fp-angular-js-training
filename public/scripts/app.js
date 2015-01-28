@@ -22,9 +22,12 @@
 				controller: "orderConfirmationController",
 				resolve: {
 					order: function(Order, $route) {
-						return Order.get({ id: $route.current.params.id });
+						// Returning a promise ensures that Angular will wait for
+						//   the remote data before switching the view.
+						return Order.get({ id: $route.current.params.id }).$promise;
 					}
 				}
 			});
 	});
+
 } (window.angular));
