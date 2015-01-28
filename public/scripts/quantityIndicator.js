@@ -4,9 +4,9 @@
 	angular.module("app").directive("quantityIndicator", function() {
 		return {
 			template: "<div class='quantityIndicator'><div class='ratio'></div></div>",
-			restrict: "EA",
+			restrict: "EA", // required just for <= 1.2
 			link: function($scope, $element, $attrs) {
-				var fill = $element.find(".ratio");
+				var fill = $element.find(".ratio"); // full jQuery required to find elements by class name
 				$scope.$watch($attrs.value, function() {
 					var maxValue = $scope.$eval($attrs.maxValue);
 					var value = $scope.$eval($attrs.value);

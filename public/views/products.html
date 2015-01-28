@@ -7,7 +7,7 @@
 		<td>
 			<div>{{ product.price | currency }}</div>
 			<div>
-				in stock: {{ product.quantity }}
+				in stock: {{ product.quantity | itemCount }}
 				<quantity-indicator value="product.quantity" max-value="100"></quantity-indicator>
 			</div>
 			<div>
