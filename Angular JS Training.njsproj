@@ -40,11 +40,14 @@
     <Compile Include="public\scripts\gallery\image.js" />
     <Compile Include="public\scripts\gallery\imageLink.js" />
     <Compile Include="public\scripts\gallery\module.js" />
+    <Compile Include="public\scripts\itemCountFilter.js" />
+    <Compile Include="public\scripts\libs\angular-messages.js" />
     <Compile Include="public\scripts\libs\angular-mocks.js" />
     <Compile Include="public\scripts\libs\angular-resource.js" />
     <Compile Include="public\scripts\libs\angular-route.js" />
     <Compile Include="public\scripts\libs\angular.js" />
     <Compile Include="public\scripts\libs\jquery.js" />
+    <Compile Include="public\scripts\multilineRequired.js" />
     <Compile Include="public\scripts\Order.js" />
     <Compile Include="public\scripts\quantityIndicator.js" />
     <Compile Include="public\scripts\app.js" />
