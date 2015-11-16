@@ -1,10 +1,10 @@
 (function(angular) {
 	"use strict";
-	
-	angular.module("app").directive("cartItemCountIndicator", function(shoppingCart) {
+
+	angular.module("app").directive("cartItemCounter", function(shoppingCart) {
 		return {
 			scope: true,
-			template: "<div class='cartItemCount'>{{itemCount}}</div>",
+			template: "<div class='cartItemCounter'>{{itemCount}}</div>",
 			replace: true,
 			restrict: "EA",
 			link: function(scope) {
@@ -16,5 +16,5 @@
 			}
 		};
 	});
-	
+
 }(window.angular));

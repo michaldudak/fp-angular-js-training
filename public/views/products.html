@@ -8,7 +8,7 @@
 			<div>{{ product.price | currency }}</div>
 			<div>
 				in stock: {{ product.quantity | itemCount }}
-				<quantity-indicator value="product.quantity" max-value="100"></quantity-indicator>
+				<progress-bar value="product.quantity" max-value="100"></progress-bar>
 			</div>
 			<div>
 				<button ng-hide="isVisible(product.id)" ng-click="showDetails(product.id)">Show details</button>
