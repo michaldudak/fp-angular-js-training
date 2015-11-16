@@ -8,17 +8,17 @@ var orders = {};
 
 exports.get = function(req, res) {
 	var id = req.params.id;
-	
+
 	if (!(id in orders)) {
 		res.send(NOT_FOUND);
 		return;
 	}
 
-	res.send(OK, orders[id]);
+	res.status(OK).send(orders[id]);
 };
 
 exports.getAll = function(req, res) {
-	res.send(OK, orders);
+	res.status(OK).send(orders);
 };
 
 exports.create = function(req, res) {
@@ -28,5 +28,5 @@ exports.create = function(req, res) {
 	orders[id] = order;
 
 	res.location("/orders/" + id);
-	res.send(CREATED, order);
+	res.status(CREATED).send(order);
 };

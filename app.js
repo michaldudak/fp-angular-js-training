@@ -1,37 +1,30 @@
 "use strict";
 
-/**
-  * Module dependencies.
-  */
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var morgan = require('morgan');
+var bodyParser = require('body-parser')
 
 var products = require('./routes/products');
 var orders = require('./routes/orders');
 
 var app = express();
+var router = express.Router();
 
-// all environments
 app.set('port', process.env.PORT || 3000);
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(app.router);
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routing
-app.get('/products', products.getAll);
-app.get('/orders', orders.getAll);
-app.get('/orders/:id', orders.get);
-app.post('/orders', orders.create);
+router.get('/products', products.getAll);
+router.get('/orders', orders.getAll);
+router.get('/orders/:id', orders.get);
+router.post('/orders', orders.create);
 
-// development only
-if ('development' == app.get('env')) {
-	app.use(express.errorHandler());
-}
-
-http.createServer(app).listen(app.get('port'), function() {
-	console.log('Express server listening on port ' + app.get('port'));
+var port = app.get('port');
+http.createServer(app).listen(port, function() {
+	console.log('Angular Store server listening on port ' + port);
 });

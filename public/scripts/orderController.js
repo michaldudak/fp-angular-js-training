@@ -1,6 +1,6 @@
 (function(angular) {
 	"use strict";
-	
+
 	angular.module("app").controller("orderController", function($scope, Order, $location, shoppingCart) {
 		$scope.order = new Order();
 		$scope.order.cart = shoppingCart.getProductsForOrder();
@@ -10,7 +10,6 @@
 			if ($scope.orderForm.$invalid) {
 				$scope.message = { text: "Something is wrong...", type: "error" };
 			} else {
-				var text = "please wait...";
 				$scope.order.$place(null, function(data) {
 					shoppingCart.removeAll();
 					$location.path("/orderConfirmation/" + data.id);
@@ -18,5 +17,5 @@
 			}
 		};
 	});
-	
+
 }(window.angular));

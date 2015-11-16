@@ -2,7 +2,7 @@ module.exports = function (config) {
 	config.set({
 		basePath: "..",
 		frameworks: ["jasmine"],
-		
+
 		browsers: [
 			"Chrome",
 			"PhantomJS",
@@ -14,6 +14,7 @@ module.exports = function (config) {
 			"public/scripts/libs/angular.js",
 			"public/scripts/libs/angular-route.js",
 			"public/scripts/libs/angular-resource.js",
+			"public/scripts/libs/angular-messages.js",
 			"public/scripts/libs/angular-mocks.js",
 			"public/scripts/gallery/module.js",
 			"public/scripts/gallery/*.js",
