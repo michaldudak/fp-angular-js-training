@@ -21,6 +21,17 @@
 			$rootScope.$broadcast("cartContentsChanged");
 		};
 
+		this.getItemCount = function() {
+			var count = 0;
+			for (var id in cart) {
+				if (cart.hasOwnProperty(id)) {
+					count += cart[id].quantity;
+				}
+			}
+
+			return count;
+		};
+
 		this.getProducts = function() {
 			var contents = [];
 
@@ -44,18 +55,9 @@
 					});
 				}
 			}
-		};
 
-		this.getItemCount = function() {
-			var count = 0;
-			for (var id in cart) {
-				if (cart.hasOwnProperty(id)) {
-					count += cart[id].quantity;
-				}
-			}
-
-			return count;
+			return contents;
 		};
 	});
-	
+
 }(window.angular));
