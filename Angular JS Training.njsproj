@@ -34,8 +34,7 @@
     <Compile Include="config\e2e.conf.js" />
     <Compile Include="config\unit.conf.js" />
     <Compile Include="gruntfile.js" />
-    <Compile Include="public\scripts\cartItemCountIndicator.js" />
-    <Compile Include="public\scripts\doubleClick.js" />
+    <Compile Include="public\scripts\cartItemCounter.js" />
     <Compile Include="public\scripts\gallery\gallery.js" />
     <Compile Include="public\scripts\gallery\image.js" />
     <Compile Include="public\scripts\gallery\imageLink.js" />
@@ -49,7 +48,7 @@
     <Compile Include="public\scripts\libs\jquery.js" />
     <Compile Include="public\scripts\multilineRequired.js" />
     <Compile Include="public\scripts\Order.js" />
-    <Compile Include="public\scripts\quantityIndicator.js" />
+    <Compile Include="public\scripts\progressBar.js" />
     <Compile Include="public\scripts\app.js" />
     <Compile Include="public\scripts\orderController.js" />
     <Compile Include="public\scripts\productsController.js" />
@@ -64,13 +63,16 @@
     <Compile Include="test\e2e\index.spec.js" />
     <Compile Include="test\e2e\page-objects\cart.page.js" />
     <Compile Include="test\e2e\page-objects\index.page.js" />
-    <Compile Include="test\unit\quantityIndicatorDirectiveTests.js" />
+    <Compile Include="test\unit\progressBarDirectiveTests.js" />
     <Compile Include="test\unit\shoppingCartControllerTests.js" />
     <Compile Include="test\unit\shoppingCartSerivceTests.js" />
     <Content Include=".jshintrc" />
     <Content Include="package.json" />
     <Content Include="public\images\air-1.png" />
     <Content Include="public\images\air-2.jpg" />
+    <Content Include="public\images\radiation-1.jpg" />
+    <Content Include="public\images\smog-1.jpg" />
+    <Content Include="public\images\smog-2.jpg" />
     <Content Include="public\images\vodka-1.jpg" />
     <Content Include="public\images\vodka-2.jpg" />
     <Content Include="public\images\water-1.jpg" />
