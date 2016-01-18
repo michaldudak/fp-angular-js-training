@@ -33,12 +33,6 @@
     <Compile Include="config\e2e-ci.conf.js" />
     <Compile Include="config\e2e.conf.js" />
     <Compile Include="config\unit.conf.js" />
-    <Compile Include="gruntfile.js" />
-    <Compile Include="public\scripts\cartItemCounter.js" />
-    <Compile Include="public\scripts\gallery\gallery.js" />
-    <Compile Include="public\scripts\gallery\image.js" />
-    <Compile Include="public\scripts\gallery\imageLink.js" />
-    <Compile Include="public\scripts\gallery\module.js" />
     <Compile Include="public\scripts\itemCountFilter.js" />
     <Compile Include="public\scripts\libs\angular-messages.js" />
     <Compile Include="public\scripts\libs\angular-mocks.js" />
@@ -46,26 +40,14 @@
     <Compile Include="public\scripts\libs\angular-route.js" />
     <Compile Include="public\scripts\libs\angular.js" />
     <Compile Include="public\scripts\libs\jquery.js" />
-    <Compile Include="public\scripts\multilineRequired.js" />
-    <Compile Include="public\scripts\Order.js" />
     <Compile Include="public\scripts\progressBar.js" />
     <Compile Include="public\scripts\app.js" />
-    <Compile Include="public\scripts\orderController.js" />
     <Compile Include="public\scripts\productsController.js" />
     <Compile Include="public\scripts\productService.js" />
     <Compile Include="public\scripts\shoppingCart.js" />
     <Compile Include="public\scripts\shoppingCartController.js" />
-    <Compile Include="public\scripts\tab.js" />
-    <Compile Include="public\scripts\tabs.js" />
-    <Compile Include="public\scripts\orderConfirmationController.js" />
     <Compile Include="routes\orders.js" />
     <Compile Include="routes\products.js" />
-    <Compile Include="test\e2e\index.spec.js" />
-    <Compile Include="test\e2e\page-objects\cart.page.js" />
-    <Compile Include="test\e2e\page-objects\index.page.js" />
-    <Compile Include="test\unit\progressBarDirectiveTests.js" />
-    <Compile Include="test\unit\shoppingCartControllerTests.js" />
-    <Compile Include="test\unit\shoppingCartSerivceTests.js" />
     <Content Include=".jshintrc" />
     <Content Include="package.json" />
     <Content Include="public\images\air-1.png" />
@@ -80,8 +62,6 @@
     <Content Include="public\images\water-3.jpg" />
     <Content Include="public\stylesheets\gallery.css" />
     <Content Include="public\stylesheets\style.css" />
-    <Content Include="public\views\order.html" />
-    <Content Include="public\views\orderConfirmation.html" />
     <Content Include="public\views\productDetails.html" />
     <Content Include="public\views\products.html" />
     <Content Include="public\views\shoppingCart.html" />
@@ -91,8 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="config\" />
-    <Folder Include="public\scripts\gallery\" />
-    <Folder Include="test\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\scripts\" />
@@ -100,9 +78,6 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="public\views\" />
-    <Folder Include="test\e2e\" />
-    <Folder Include="test\e2e\page-objects\" />
-    <Folder Include="test\unit\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
