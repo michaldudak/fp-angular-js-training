@@ -1,4 +1,5 @@
 (function(angular) {
+	"use strict";
 
 	angular.module("app").directive("tabs", function() {
 		return {

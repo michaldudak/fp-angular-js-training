@@ -1,6 +1,6 @@
-(function (angular) {
+(function(angular) {
 	"use strict";
-	
+
 	angular.module("gallery").directive("gallery", function($compile) {
 		return {
 			restrict: "EA",
@@ -35,20 +35,20 @@
 
 				var controls = angular.element("<ol />", { "class": "gallery-controls" });
 				elem.append(controls);
-				
+
 				function recreateControls() {
 					controls.empty();
 					for (var i = 0; i < $scope.images.length; ++i) {
 						var listItem = angular.element("<li data-image-link='" + i + "'></li>");
 						controls.append(listItem);
 					}
-					
+
 					$compile(controls)($scope);
 
 					if ($scope.images.length) {
 						$scope.images[0].show();
 					}
-				}	
+				}
 
 				$scope.$watchCollection("images", function() {
 					recreateControls();
@@ -56,5 +56,5 @@
 			}
 		};
 	});
-	
+
 } (window.angular));
