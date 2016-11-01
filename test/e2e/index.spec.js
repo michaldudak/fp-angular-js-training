@@ -12,12 +12,12 @@ describe("Home page", function() {
 		it("should display a correct title", function() {
 			expect(indexPage.pageTitle()).toEqual("Angular Store");
 		});
-		
-		it("should display three items", function() {
-			expect(indexPage.productsList().count()).toEqual(3);
+
+		it("should display five items", function() {
+			expect(indexPage.productsList().count()).toEqual(5);
 		});
 	});
-	
+
 	describe("when searching for 'water'", function() {
 		it("should display one item", function() {
 			indexPage.searchFor("water");
@@ -25,7 +25,7 @@ describe("Home page", function() {
 			expect(indexPage.productsList().count()).toEqual(1);
 		});
 	});
-	
+
 	describe("when clicked on 'Add to cart'", function() {
 		beforeEach(function() {
 			indexPage.get();

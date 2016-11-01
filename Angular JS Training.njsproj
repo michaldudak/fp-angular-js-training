@@ -66,6 +66,7 @@
     <Compile Include="test\unit\progressBarDirectiveTests.js" />
     <Compile Include="test\unit\shoppingCartControllerTests.js" />
     <Compile Include="test\unit\shoppingCartSerivceTests.js" />
+    <Content Include=".gitignore" />
     <Content Include=".jshintrc" />
     <Content Include="package.json" />
     <Content Include="public\images\air-1.png" />
