@@ -1,4 +1,4 @@
-(function (angular) {
+(function(angular) {
 	"use strict";
 
 	angular.module("app").controller("shoppingCartController", function($scope, shoppingCart) {
@@ -10,5 +10,5 @@
 			}, 0);
 		};
 	});
-	
+
 }(window.angular));
